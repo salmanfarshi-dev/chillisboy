@@ -7,6 +7,8 @@ import Things from '../assets/things.png'
 
 function Mood() {
 
+
+
   return (
     <section className='max-w-7xl mx-auto w-full px-4 md:px-0 mt-10 lg:mt-12'>
         <Heading tittle="What are you in the mood for?"/>
