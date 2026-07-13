@@ -54,7 +54,7 @@ function Banner() {
             <div className="col-span-3">
               <Autocomplete
                 className="w-full"
-                placeholder="Select Location"
+                placeholder="Date"
                 selectionMode="single"
               >
                 <Label>Date</Label>
@@ -85,7 +85,7 @@ function Banner() {
             <div className="col-span-3">
               <Autocomplete
                 className="w-full"
-                placeholder="Select Location"
+                placeholder="Night clubs"
                 selectionMode="single"
               >
                 <Label>Activities</Label>
