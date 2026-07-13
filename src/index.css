@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+body{
+     font-family: "Red Hat Display", sans-serif;
+}
+li{
+    list-style: none;
+}
+
+@theme{
+    --color-primary: #26395C;
+    --color-secondary: #0E8BFF;
+}
