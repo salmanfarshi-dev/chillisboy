@@ -11,4 +11,35 @@ li{
 @theme{
     --color-primary: #26395C;
     --color-secondary: #0E8BFF;
+    --color-success: #0E8BFF;
+    --color-border: #969DAA;
+    
+}
+
+.tourSwiper.swiper {
+  overflow: visible !important;
+  padding-bottom: 60px;
+}
+
+.tourSwiper .swiper-wrapper {
+  overflow: visible;
+}
+
+.tourSwiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.tourSwiper .swiper-button-prev,
+.tourSwiper .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .tourSwiper .swiper-button-prev,
+  .tourSwiper .swiper-button-next {
+    display: none;
+  }
+  .tourSwiper.swiper {
+  padding-bottom: 20px;
+}
 }
