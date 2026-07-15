@@ -51,7 +51,7 @@ function Tour() {
 
 
   return (
-    <section className="mt-12 border-t mb-50 ">
+    <section className="mt-5 lg:mt-12 border-t mb-10 lg:mb-40 overflow-x-hidden">
       <div className="max-w-7xl mx-auto md:px-0">
         <Heading
           tittle="See How People are Chilling On Chillsbay"

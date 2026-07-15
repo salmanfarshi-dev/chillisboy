@@ -5,6 +5,8 @@ import Mood from '../Layout/Mood';
 import Lagos from '../Layout/Lagos';
 import UseChillsbay from '../Layout/UseChillsbay';
 import Tour from '../Layout/Tour';
+import Photogallery from '../Layout/Photogallery';
+import Footer from '../Layout/Footer';
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
     <Lagos/>
     <UseChillsbay/>
     <Tour/>
+    <Photogallery/>
+    <Footer/>
   
     </>
 
