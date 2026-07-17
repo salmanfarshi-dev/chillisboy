@@ -1,12 +1,6 @@
 import { useState } from "react";
-import {
-  ChevronDown,
-  ShoppingCart,
-  User,
-  Menu,
-  X,
-  Palmtree,
-} from "lucide-react";
+import { ChevronDown, ShoppingCart, User, Menu, X } from "lucide-react";
+
 import Logo from "../assets/logo.png";
 
 const thingsToDoItems = ["Water Sports", "Day Parties", "Outdoors", "Rentals"];
@@ -20,9 +14,9 @@ const mobileBottomLinks = ["My Profile", "Cart", "Contact Us", "Log Out"];
 function Navbar() {
   const [thingsOpen, setThingsOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
+  const [isLoggedIn] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileThingsOpen, setMobileThingsOpen] = useState(false);
-
   return (
     <nav className="relative w-full bg-white ">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
@@ -62,8 +56,7 @@ function Navbar() {
                 {thingsToDoItems.map((item) => (
                   <li
                     key={item}
-                    href="#"
-                    className="block px-4 py-2 text-sm text-primary hover:bg-blue-50 hover:text-blue-600"
+                    className="block cursor-pointer px-4 py-2 text-sm text-primary hover:bg-blue-50 hover:text-blue-600"
                   >
                     {item}
                   </li>
@@ -83,31 +76,27 @@ function Navbar() {
           </button>
 
           {/* Account dropdown */}
-          <div
-            className="relative z-40"
-            onMouseEnter={() => setAccountOpen(true)}
-            onMouseLeave={() => setAccountOpen(false)}
-          >
-            <button className="flex items-center gap-1 text-sm lg:text-[18px] cursor-pointer transition-all font-medium text-primary hover:text-blue-600">
+          <div className="relative z-40">
+            <button
+              onClick={() => setAccountOpen((prev) => !prev)}
+              className="flex items-center gap-1 text-sm lg:text-[18px] cursor-pointer transition-all font-medium text-primary hover:text-blue-600"
+            >
               <User className="h-5 w-5" />
               Account
             </button>
 
-            {accountOpen && (
-              <div className="absolute right-0 top-full w-44 rounded-lg border border-gray-100 bg-white py-2 shadow-lg">
-                {accountItems.map((item, i) => (
-                  <li
-                    key={item}
-                    href="#"
-                    className={`block px-4 py-2 text-sm text-primary transition-all hover:bg-blue-50 hover:text-blue-600 ${
-                      i === 0 ? "bg-blue-50 text-blue-600" : ""
-                    }`}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </div>
-            )}
+            {accountOpen &&
+              (isLoggedIn ? (
+                <div className="absolute right-0 top-full w-[200px] rounded-lg border border-gray-100 bg-white py-2 shadow-lg">
+                  {accountItems.map((item) => (
+                    <li key={item} className="block px-4 py-2 hover:bg-blue-50">
+                      {item}
+                    </li>
+                  ))}
+                </div>
+              ) : (
+                <h1>shifa</h1>
+              ))}
           </div>
 
           <button className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm lg:text-[18px] font-semibold text-white hover:bg-blue-700 duration-300 cursor-pointer">
