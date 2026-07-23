@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ShoppingCart, User, Menu, X } from "lucide-react";
 
 import Logo from "../assets/logo.png";
+import AccountModal from "../Component/AccountModal";
 
 const thingsToDoItems = ["Water Sports", "Day Parties", "Outdoors", "Rentals"];
 
@@ -30,7 +31,9 @@ function Navbar() {
           <li className="text-[18px] font-medium list-none cursor-pointer text-primary hover:text-blue-600 transition">
             Eat & Drink
           </li>
-
+ <button>
+  <AccountModal/>
+ </button>
           <li className="list-none cursor-pointer flex items-center gap-1.5 text-sm font-medium text-primary hover:text-blue-600 text-[18px] transition">
             Club
             <span className="rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-semibold text-white ">
@@ -95,7 +98,9 @@ function Navbar() {
                   ))}
                 </div>
               ) : (
-                <h1>shifa</h1>
+                <div className="absolute right-0 top-10 w-[500px] bg-red-400 py-6 px-3">
+                 
+                </div>
               ))}
           </div>
 

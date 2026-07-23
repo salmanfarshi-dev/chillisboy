@@ -1,7 +1,37 @@
 import React from "react";
 import { Select, SelectItem, Button } from "@heroui/react";
+import {
+  Autocomplete,
+  AutocompleteSection,
+  AutocompleteItem,
+} from "@heroui/autocomplete";
 
 function Banner() {
+  const animals = [
+    {
+      label: "Cat",
+      key: "cat",
+      description: "The second most popular pet in the world",
+    },
+    {
+      label: "Dog",
+      key: "dog",
+      description: "The most popular pet in the world",
+    },
+    {
+      label: "Elephant",
+      key: "elephant",
+      description: "The largest land animal",
+    },
+    { label: "Lion", key: "lion", description: "The king of the jungle" },
+    { label: "Tiger", key: "tiger", description: "The largest cat species" },
+    {
+      label: "Giraffe",
+      key: "giraffe",
+      description: "The tallest land animal",
+    },
+  ];
+
   return (
     <section className='bg-[url("/bannerimage.png")] h-[84vh] w-full bg-no-repeat bg-cover bg-center relative'>
       <div className="absolute inset-0 bg-black/40"></div>
@@ -11,11 +41,13 @@ function Banner() {
           Find amazing things to do anytime, anywhere in Lagos.
         </h1>
 
-        <div className="mt-10 w-full lg:w-[726px] bg-white rounded-2xl p-6">
+        {/* <div className="mt-10 w-full lg:w-[726px] bg-white rounded-2xl p-6">
           <div className="grid lg:grid-cols-12 gap-4">
-           
+            <div className="col-span-3 w-full">
+             
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
