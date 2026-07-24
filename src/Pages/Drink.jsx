@@ -1,11 +1,15 @@
 import React from "react";
 import {Button} from "@heroui/react";
+import Occasion from "../Component/Occasion";
 
 function Drink() {
   return (
+
+    <>
+    
     <section className='bg-[url("/drink.png")] w-full left-0 right-0 bg-center  bg-cover bg-no-repeat'>
       <div className="pt-16 lg:pt-25 pb-16 lg:pb-40 max-w-7xl mx-auto w-full px-4 md:px-0 flex flex-col ">
-        <div className="w-full lg:w-137.5 px-8 py-8 bg-subbg rounded-xl">
+        <div className="w-full lg:w-137.5 px-8 py-8 bg-subbg/85 rounded-xl">
           <h1 className="text-[24px] lg:text-[42px] font-bold text-primary tracking-[-2%] leading-9.5 ">
             Our top pick for the week!
           </h1>
@@ -22,7 +26,11 @@ function Drink() {
           </div>
         </div>
       </div>
+
+
     </section>
+       <Occasion/>
+    </>
   );
 }
 
