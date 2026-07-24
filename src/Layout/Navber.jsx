@@ -31,9 +31,9 @@ function Navbar() {
           <li className="text-[18px] font-medium list-none cursor-pointer text-primary hover:text-blue-600 transition">
             Eat & Drink
           </li>
- <button>
+ {/* <button>
   <AccountModal/>
- </button>
+ </button> */}
           <li className="list-none cursor-pointer flex items-center gap-1.5 text-sm font-medium text-primary hover:text-blue-600 text-[18px] transition">
             Club
             <span className="rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-semibold text-white ">
