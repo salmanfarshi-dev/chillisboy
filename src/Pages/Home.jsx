@@ -11,14 +11,14 @@ import Footer from '../Layout/Footer';
 function Home() {
   return (
     <>
-    <Navbar/>
+  
     <Banner/>
     <Mood/>
     <Lagos/>
     <UseChillsbay/>
     <Tour/>
     <Photogallery/>
-    <Footer/>
+  
   
     </>
 
