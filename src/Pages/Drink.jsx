@@ -2,6 +2,7 @@ import React from "react";
 import {Button} from "@heroui/react";
 import Occasion from "../Component/Occasion";
 import SeeMoreCard from "../Layout/SeeMoreCard";
+import DrinkEvent from "../Component/DrinkEvent";
 
 function Drink() {
   return (
@@ -32,6 +33,9 @@ function Drink() {
     </section>
        <Occasion/>
        <SeeMoreCard/>
+       <DrinkEvent/>
+
+
     </>
   );
 }

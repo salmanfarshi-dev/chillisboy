@@ -15,11 +15,11 @@ import "swiper/css/pagination";
 
 
 
-function Tour() {
+function DrinkEvent() {
   const slider = [
     {
-      image: "/wizkid-show.png",
-      tittle: "Wizkid made in lagos tour",
+      image: "/public/drinkevent.png",
+      tittle: "GTCO Food and Drink Festival 2022: Africa’s Biggest Food and Drink Festival",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
       date: "Dec 12 2022",
@@ -28,7 +28,7 @@ function Tour() {
       Number: "N20,00",
     },
     {
-      image: "/volley-ball-game.png",
+      image: "/public/Rectangle 687.png",
       tittle: "Playing game in around field",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
@@ -38,7 +38,7 @@ function Tour() {
       Number: "N50,20",
     },
     {
-      image: "/sight-seeing.png",
+      image: "/public/Rectangle 689.png",
       tittle: "Find the place where is Train",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
@@ -53,11 +53,8 @@ function Tour() {
   return (
     <section className="mt-5 lg:mt-12 border-t mb-10 lg:mb-40 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-0">
-        <Heading
-          tittle="See How People are Chilling On Chillsbay"
-          className="mt-10"
-        />
-        <h4 className="mt-10 lg:mt-29.25 mb-10 text-[32px] font-bold text-primary lg:ml-30">Upcoming events this weekend</h4>
+        
+        <h4 className=" mt-10 lg:mt-29.25 mb-10 text-xl lg:text-[32px] font-bold text-primary lg:ml-30">Upcoming Eat & Drink Events</h4>
 
         <Swiper
         className="tourSwiper"
@@ -149,4 +146,4 @@ function Tour() {
   );
 }
 
-export default Tour;
+export default DrinkEvent;

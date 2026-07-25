@@ -25,13 +25,14 @@ function UseChillsbay() {
     image: "/ticket.png",
     tittle: "Free Cancellation and ticket transfer",
     description: "Resell your tickets or cancel your reservations at zero cost 24 hours before.",
-  },
+  }
 ]
 
 
   return (
    <section className="mt-10 lg:mt-16">
     <Heading tittle="Why Use Chillsbay?"/>
+    
     <div className="max-w-7xl mx-auto mt-6 lg:mt-10 bg-[#F5FAFF] py-8 lg:py-16 px-4 lg:px-10 shadow-2xl">
 
         <div className="hidden lg:grid grid-cols-12 gap-x-20">

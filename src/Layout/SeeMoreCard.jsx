@@ -62,24 +62,17 @@ function SeeMoreCard() {
 
 
 
-
-
-
-
-
-
-
   return (
     <section className=' w-full px-4 md:px-0 mt-5 bg-subbg'>
-        <div className='max-w-7xl mx-auto pt-30 pb-20'>
-            <div className=" text-end">
+        <div className='max-w-7xl mx-auto pt-10 lg:pt-30 pb-20'>
+            <div className=" md:text-end">
                {
                 show < cartdata.length && (
                    <Button onClick={()=>setShow(show+4)} className='bg-transparent text-success font-semibold text-[24px]'>See More</Button>
                 )
                }
             </div>
-      <div className="flex items-center flex-wrap gap-8 mt-5">
+      <div className="flex items-center flex-wrap gap-8 mt-5 justify-center">
         {
           cartdata.slice(0,show).map(item =>(
             <Cards
