@@ -15,7 +15,6 @@ li{
 
 @theme{
     --color-primary: #26395C;
-    --color-secondary: #0E8BFF;
     --color-success: #0E8BFF;
     --color-border: #969DAA;
     --color-subbg: #FBFCFF;
@@ -51,4 +50,8 @@ li{
   .tourSwiper.swiper {
   padding-bottom: 20px;
 }
+}
+
+.active{
+  color: #0E8BFF;
 }

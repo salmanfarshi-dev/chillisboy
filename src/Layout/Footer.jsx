@@ -11,8 +11,11 @@ import {
 import Logo from "../assets/logo.png";
 import { RiPencilRuler2Line } from "react-icons/ri";
 import { Button } from "@heroui/react";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
+
+  const location = useLocation()
   const icons = [
     {
       id: 1,
@@ -66,10 +69,11 @@ function Footer() {
   ];
 
   return (
-    <section className="mt-20 mb-23 max-w-7xl mx-auto px-4 md:px-0">
-      <div className="flex justify-between gap-14 flex-col lg:flex-row">
+    <section className={`  ${location.pathname=== "/club" ?"bg-black py-8": "bg-white" }`}>
+      <div className="mt-20 mb-23 max-w-7xl mx-auto px-4 md:px-0">
+        <div className="flex justify-between gap-14 flex-col lg:flex-row">
         <div className="flex flex-col order-1">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" className="md:w-full w-50"/>
           <p className="text-[15px] text-primary font-normal py-6">
             Copyright 2022 ©{" "}
           </p>
@@ -148,6 +152,7 @@ function Footer() {
             </Button>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

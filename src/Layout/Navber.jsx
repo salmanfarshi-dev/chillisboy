@@ -3,6 +3,7 @@ import { ChevronDown, ShoppingCart, User, Menu, X } from "lucide-react";
 
 import Logo from "../assets/logo.png";
 import AccountModal from "../Component/AccountModal";
+import { NavLink, useLocation } from "react-router-dom";
 
 const thingsToDoItems = ["Water Sports", "Day Parties", "Outdoors", "Rentals"];
 
@@ -13,13 +14,15 @@ const mobileLinks = ["Eat & Drink", "Events", "Club"];
 const mobileBottomLinks = ["My Profile", "Cart", "Contact Us", "Log Out"];
 
 function Navbar() {
+
+  const location = useLocation()
   const [thingsOpen, setThingsOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [isLoggedIn] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileThingsOpen, setMobileThingsOpen] = useState(false);
   return (
-    <nav className="relative w-full bg-white ">
+    <nav className={`relative w-full ${location.pathname=== "/club" ?"bg-black text-white": "bg-white" }`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <li className="list-none cursor-pointer flex items-center gap-1 text-2xl font-bold text-blue-600">
@@ -28,18 +31,28 @@ function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 lg:flex">
-          <li className="text-[18px] font-medium list-none cursor-pointer text-primary hover:text-blue-600 transition">
-            Eat & Drink
+           <li className={`text-[18px] font-medium list-none cursor-pointer  hover:text-blue-600 transition ${location.pathname=== "/club" ?"bg-black text-white": "text-primary"}`}>
+         <NavLink to="/">
+            Home
+          </NavLink> 
           </li>
- {/* <button>
-  <AccountModal/>
- </button> */}
-          <li className="list-none cursor-pointer flex items-center gap-1.5 text-sm font-medium text-primary hover:text-blue-600 text-[18px] transition">
+           <li className={`text-[18px] font-medium list-none cursor-pointer  hover:text-blue-600 transition ${location.pathname=== "/club" ?"bg-black text-white": "text-primary"}`}>
+         <NavLink to="/drink">
+            Eat & Drink
+          </NavLink> 
+          </li>
+
+      
+      
+
+            <li className={`text-[18px] font-medium list-none cursor-pointer  hover:text-blue-600 transition ${location.pathname=== "/club" ?"bg-black text-white": "text-primary"}`}>
+          <NavLink to="/club"  >
             Club
             <span className="rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-semibold text-white ">
               HOT
             </span>
-          </li>
+          </NavLink>
+          </li>  
 
           {/* Things to do dropdown */}
           <div
@@ -47,7 +60,7 @@ function Navbar() {
             onMouseEnter={() => setThingsOpen(true)}
             onMouseLeave={() => setThingsOpen(false)}
           >
-            <button className="flex items-center gap-1 text-sm font-medium text-primary text-[18px]  transition hover:text-blue-600 cursor-pointer">
+            <button className={`flex items-center gap-1 text-sm font-medium text-primary text-[18px]  transition hover:text-blue-600 cursor-pointer  ${location.pathname=== "/club" ?"bg-black text-white": "text-primary"}`}>
               Things to do
               <ChevronDown
                 className={`h-4 w-4 transition-transform ${thingsOpen ? "rotate-180" : ""}`}
@@ -75,14 +88,14 @@ function Navbar() {
             aria-label="Cart"
             className="text-primary cursor-pointer hover:text-blue-600"
           >
-            <ShoppingCart className="h-7 w-7 text-primary" />
+            <ShoppingCart className={`h-7 w-7  ${location.pathname=== "/club" ?"bg-black text-white": "text-primary"}`} />
           </button>
 
           {/* Account dropdown */}
           <div className="relative z-40">
             <button
               onClick={() => setAccountOpen((prev) => !prev)}
-              className="flex items-center gap-1 text-sm lg:text-[18px] cursor-pointer transition-all font-medium text-primary hover:text-blue-600"
+              className={`flex items-center gap-1 text-sm lg:text-[18px] cursor-pointer transition-all font-medium hover:text-blue-600  ${location.pathname=== "/club" ?"bg-black text-white": "text-primary"}`}
             >
               <User className="h-5 w-5" />
               Account
