@@ -6,6 +6,7 @@ import Drink from "./Pages/Drink";
 import Rootlayout from "./Component/Rootlayout";
 import Club from "./Pages/Club";
 import Reservations from "./Pages/Reservations";
+import OrderComplete from "./Pages/OrderComplete";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="drink" element={<Drink />} />
             <Route path="club" element={ <Club/> }/>
             <Route path="reservations" element={ <Reservations/> }/>
+            <Route path="order-completed" element={ <OrderComplete/> }/>
           </Route>
         </Routes>
       </BrowserRouter>
