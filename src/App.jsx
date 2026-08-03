@@ -7,6 +7,7 @@ import Rootlayout from "./Component/Rootlayout";
 import Club from "./Pages/Club";
 import Reservations from "./Pages/Reservations";
 import OrderComplete from "./Pages/OrderComplete";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="club" element={ <Club/> }/>
             <Route path="reservations" element={ <Reservations/> }/>
             <Route path="order-completed" element={ <OrderComplete/> }/>
+            <Route path="contact" element={ <Contact/> }/>
           </Route>
         </Routes>
       </BrowserRouter>
