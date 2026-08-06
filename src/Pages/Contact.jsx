@@ -1,3 +1,4 @@
+import { Button } from '@heroui/react';
 import React from 'react'
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -22,10 +23,41 @@ function Contact() {
         </div>
     </div>
 
-    <div className="bg-white shadow-lg rounded-lg md:w-152.5 py-12 px-8">
-        <div className=""></div>
+    <div className="bg-white shadow-lg rounded-lg md:w-160.5 py-12 px-8">
+        <form action="">
+            <div className="flex flex-wrap gap-8">
+            <div className="flex flex-col gap-y-1">
+                <label >First Name</label>
+                <input type="text" name="" id="" placeholder='First Name' className='py-3 px-4 md:w-68 rounded-lg bg-[#F5FAFF] placeholder:text-border'/>
+            </div>
+            <div className="flex flex-col gap-y-1">
+                <label >Last Name</label>
+                <input type="text" name="" id="" placeholder='Last Name' className='py-3 px-4 md:w-68 rounded-lg bg-[#F5FAFF] placeholder:text-border'/>
+            </div>
+            <div className="flex flex-col gap-y-1">
+                <label >Email Address</label>
+                <input type="text" name="" id="" placeholder='e.g. johndoe@email.com' className='py-3 px-4 md:w-68 rounded-lg bg-[#F5FAFF] placeholder:text-border'/>
+            </div>
+            <div className="flex flex-col gap-y-1">
+                <label >Phone number</label>
+                <input type="text" name="" id="" placeholder='Phone number' className='py-3 px-4 md:w-68 rounded-lg bg-[#F5FAFF] placeholder:text-border'/>
+            </div>
+            <div className="flex flex-col gap-y-1">
+                <label >Subject</label>
+                <input type="text" name="" id="" placeholder='Text you subject' className='py-3 px-4 lg:w-143.5 rounded-lg bg-[#F5FAFF] placeholder:text-border'/>
+            </div>
+            <div className="flex flex-col gap-y-1">
+                <label >Message</label>
+               <textarea name="" id="" className='py-3 px-4 lg:w-143.5 rounded-lg bg-[#F5FAFF] placeholder:text-border h-30'></textarea>
+            </div>
+            <Button className='bg-success text-white font-semibold w-full py-7'>SEND MESSAGE</Button>
+
+        </div>
+        </form>
     </div>
    </div>
+
+   
 
    </section>
   )
