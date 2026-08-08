@@ -2,6 +2,7 @@ import { Button } from '@heroui/react';
 import React from 'react'
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import FQA from '../Component/FQA';
 
 function Contact() {
   return (
@@ -85,6 +86,15 @@ function Contact() {
             <p className='text-border font-normal leading-6.75 tracking-[1%] md:w-69.25 mx-auto text-center '>Questions about using  Market? Our support team is here to help.</p>
             <a href="" className='text-success mt-6'>chills@chillsbay.com</a>
     </div>
+   </div>
+
+
+
+
+
+
+   <div className="mt-30">
+    <FQA/>
    </div>
 
    </section>
